@@ -1,0 +1,7 @@
+ Program
+   Variables Setup
+   BeforeStart
+     jp_beck≔rpc_factory("xmlrpc","http://10.2.4.106:33000")
+   Robot Program
+     Wait: 1.0
+     jp_beck.yuki_log(get_actual_tcp_pose(),"TCP")
