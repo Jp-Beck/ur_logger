@@ -13,7 +13,7 @@ JP-Beck UR Logger is a graphical logging tool for Universal Robots. It provides 
 5. **Cross-platform compatibility**: The application is compatible with Windows, macOS, and Linux operating systems.
 
 ## Usage
-1. Run the `main.py` file to launch the JP-Beck UR Logger application.
+1. Run the `gui_logger.py` file to launch the JP-Beck UR Logger application.
 2. Click on the "Select Folder" button to choose the folder where the log file will be saved.
 3. Click on the "Start Logging" button to start logging the data received from the UR robot.
 4. Monitor the log messages in real-time in the output window of the application.
