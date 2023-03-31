@@ -1,10 +1,7 @@
 # JP-Beck UR Logger
 Real-time GUI-based Custom Log Data Extractor for Universal Robots
 ## Description
-JP-Beck UR Logger is a graphical logging tool for Universal Robots. It provides an easy-to-use interface to log data and monitor the system state in real-time. The application is built using Python with the Tkinter library for the graphical interface, the xmlrpc library for communication, and the standard logging library for logging purposes. Although there is a URScript, which allows you to add log message to the robot's support file, you need to 
-save the support.zip file to a usb or ssh copy which is clumsy. 
-> textmsg("Hello")
-
+JP-Beck UR Logger is a graphical logging tool for Universal Robots. It provides an easy-to-use interface to log data and monitor the system state in real-time. The application is built using Python with the Tkinter library for the graphical interface, the xmlrpc library for communication, and the standard logging library for logging purposes.
 
 ## Features
 1. **User-friendly interface**: The application has a simple and intuitive GUI with buttons for selecting the log folder, starting logging, and exiting the program. It also displays the IP address of the computer on the screen.
@@ -44,3 +41,8 @@ The log file is in the folder specified.
 ![screenshot_0026](https://user-images.githubusercontent.com/71532612/229045819-3021d6b7-92b4-4e67-b191-21dc40dbd281.png)
 
 Please refer to the README file for more information on installation and dependencies.
+Although there is a URScript, which allows you to add log message to the robot's support file, you need to 
+save the support.zip file to a usb or ssh copy which is clumsy. 
+> textmsg("Hello")
+![screenshot_0028](https://user-images.githubusercontent.com/71532612/229051838-951eec6c-99ed-4fc4-8f26-b098bffd91fe.png)
+
