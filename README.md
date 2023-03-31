@@ -46,3 +46,55 @@ save the support.zip file to a usb or ssh copy which is clumsy.
 > textmsg("Hello")
 ![screenshot_0028](https://user-images.githubusercontent.com/71532612/229051838-951eec6c-99ed-4fc4-8f26-b098bffd91fe.png)
 
+# # Plot the logs - Bar Graph Plotter
+
+If you would like to visualize the log data, referer to 'ur_plotter.py'
+
+This Python script reads log files from a specified folder, processes them, and generates bar graphs to visualize the data. The generated plots are saved as PNG images in the same folder as the Python module.
+
+## Usage
+**__This program can be used to analyze the consistency of a vision system or judge the accuracy of a robot's joint movements.__**
+1. Ensure that your log files are placed in the same folder as the Python module.
+2. Run the script using your Python interpreter: `python ur_plotter.py`
+3. The script will process each log file, create bar graphs for each data set, and save them as PNG images in the same folder.
+
+## Features
+
+- The script processes log files and creates plots for different axes (X, Y, Z, Rx, Ry, and Rz).
+- It generates bar graphs with appropriate labels, titles, and legends.
+- The bar graphs include a red dashed line representing the set point and green lines representing the upper and lower range limits.
+- The plots are saved as high-resolution (600 dpi) PNG images.
+- The script uses concurrent processing with the `ProcessPoolExecutor` to speed up the plotting process.
+
+## Dependencies
+
+- matplotlib: Used for generating the bar graphs.
+- math: Used for mathematical operations.
+- os: Used for file and folder operations.
+- subprocess: Used for running shell commands.
+- concurrent.futures: Used for concurrent processing.
+
+## Classes
+
+- `Plot`: Represents a single plot with methods for reading log files and generating the bar graph.
+- `PlotProcessor`: Processes the log files and generates the plots using multiple threads.
+
+## Note
+
+- Make sure that the log files have the correct format for the script to work properly.
+> subprocess.run(['sed', '-i', 's/^2023.*: //', filepath])
+
+'sed' linux command has been used to clean up the datetime() from each line. However, it will not erase other data
+- The script has been tested with Python 3.8 and above.
+
+## Results
+![Difference between set point vs  Test for X in 1p_x_y_30 log](https://user-images.githubusercontent.com/71532612/229064356-857bbf51-0051-4b2c-b10e-ede34184ac8d.png)
+![Difference between set point vs  Test for Y in 1p_x_y_30 log](https://user-images.githubusercontent.com/71532612/229064363-b6ec57ef-491b-425b-8f59-9f6bc6a65afd.png)
+![Difference between set point vs  Test for Z in 1p_x_y_30 log](https://user-images.githubusercontent.com/71532612/229064377-9cf41a65-61d0-462b-b7c2-9fe97b33744a.png)
+![Difference between set point vs  Test for Rx in 1P_x_30 log](https://user-images.githubusercontent.com/71532612/229064344-43ac7311-33fe-4c2e-b088-65b7323a5597.png)
+![Difference between set point vs  Test for Ry in 1P_y_30 log](https://user-images.githubusercontent.com/71532612/229064315-01f0c287-6a77-4366-b5df-ef62e767a1f4.png)
+![Difference between set point vs  Test for Rz in 1p_x_y_30 log](https://user-images.githubusercontent.com/71532612/229064352-5390c26e-5d86-4e9f-9b4d-49b51bac21bb.png)
+
+**Note**
+'set_point' is the waypoint the Universal Robot's TCP is expected to be.
+'Range limits' are the allowed error interval.
