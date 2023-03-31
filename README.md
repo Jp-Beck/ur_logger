@@ -1,4 +1,4 @@
-# JP-Beck UR Logger
+# UR Logger
 Real-time GUI-based Custom Log Data Extractor for Universal Robots
 ## Description
 JP-Beck UR Logger is a graphical logging tool for Universal Robots. It provides an easy-to-use interface to log data and monitor the system state in real-time. The application is built using Python with the Tkinter library for the graphical interface, the xmlrpc library for communication, and the standard logging library for logging purposes.
