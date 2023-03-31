@@ -98,3 +98,5 @@ This Python script reads log files from a specified folder, processes them, and 
 **Note**
 'set_point' is the waypoint the Universal Robot's TCP is expected to be.
 'Range limits' are the allowed error interval.
+
+![Screenshot from 2023-03-31 18-06-18](https://user-images.githubusercontent.com/71532612/229078079-93c32148-2825-4e90-9ba1-b38a8d13f741.png)
